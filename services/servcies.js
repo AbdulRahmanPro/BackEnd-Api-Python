@@ -49,4 +49,3 @@ const deleteUserById = async (req, res) => {
 module.exports = { checkBoardNumber, addUser, deleteUserById };
 
 
-module.exports = { checkBoardNumber, addUser };

@@ -8,6 +8,5 @@ router.get('/', function(req, res, next) {
 
 router.post("/add",addUser)
 router.post("/check",checkBoardNumber)
-router.delete('/delete',deleteUserById)
-
+router.delete('/DeleteUser',deleteUserById)
 module.exports = router;

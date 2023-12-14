@@ -31,5 +31,22 @@ const addUser = async (req, res) => {
     res.status(500).json({ success: false, message: 'حدث خطأ أثناء إضافة المستخدم.' });
   }
 };
+const deleteUserById = async (req, res) => {
+  const { id } = req.body; // Assuming the ID is passed as a URL parameter
+  try {
+    const user = await UserBoard.findByIdAndDelete(id);
+    if (user) {
+      res.json({ success: true, message: 'تم حذف المستخدم بنجاح.' });
+    } else {
+      res.status(404).json({ success: false, message: 'لم يتم العثور على المستخدم.' });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'حدث خطأ أثناء حذف المستخدم.' });
+  }
+};
+
+module.exports = { checkBoardNumber, addUser, deleteUserById };
+
 
 module.exports = { checkBoardNumber, addUser };

@@ -9,17 +9,17 @@ const indexRouter = require('./routes/index');
 const cors = require('cors');
 const app = express();
 const port = 3000;
-var mongoDbUri = 'mongodb+srv://database.2bchr9o.mongodb.net/?retryWrites=true&w=majority';
+var mongoDbUri = 'mongodb+srv://cluster0.ivva45d.mongodb.net/?retryWrites=true&w=majority';
 
 mongoose
   .connect(mongoDbUri, {
-    user: 'Saifi2008',
-    pass: 'XagNZlt2OnJ4PQCc',
+    user: 'maynkraftalhosni',
+    pass: 'rmwTPY076XSlq6AC',
   })
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(port, () => {
-      console.log(`app is listening on port ${port}`);
+      console.log(`app is li  stening on port ${port}`);
     });
   })
   .catch((error) => {

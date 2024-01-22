@@ -14,7 +14,7 @@ var mongoDbUri = 'mongodb+srv://cluster0.ivva45d.mongodb.net/?retryWrites=true&w
 mongoose
   .connect(mongoDbUri, {
     user: 'maynkraftalhosni',
-    pass: 'rmwTPY076XSlq6AC',
+    pass: 'kEvl8Pu9GaUj3Ksd',
   })
   .then(() => {
     console.log('Connected to MongoDB');
